@@ -20,7 +20,7 @@
     <releaseNotes>https://github.com/zscaler/zscaler-terraformer/releases</releaseNotes>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
-    <file src="VERIFICATION.txt" target="VERIFICATION.txt" />
+     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" /> 
   </files>
 </package>

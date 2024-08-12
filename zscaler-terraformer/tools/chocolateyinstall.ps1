@@ -24,11 +24,11 @@ Get-ChocolateyUnzip @packageArgs
 
 # Move the executable to a directory in the system PATH
 $exePath = "$unzipLocation\zscaler-terraformer.exe"
-$destinationPath = "C:\Program Files\zscaler-terraformer"
+$destinationPath = "$Env:ProgramFiles\zscaler-terraformer"
 if (-not (Test-Path $destinationPath)) {
     New-Item -Path $destinationPath -ItemType Directory -Force
 }
 Move-Item -Path $exePath -Destination $destinationPath
 
 # Clean up the zip file
-Remove-Item -Path $zipFile -Force -ErrorAction SilentlyContinue
+Remove-Item -Path $zipFile -Force -ErrorAction SilentlyContinue 
