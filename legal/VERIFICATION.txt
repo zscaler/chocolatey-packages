@@ -1,12 +1,25 @@
-This package contains the following binaries:
-- zscaler-terraformer_1.3.0_windows_amd64.zip
+VERIFICATION
 
-The binaries were downloaded from the official release page at:
-https://github.com/zscaler/zscaler-terraformer/releases/download/v1.3.0/zscaler-terraformer_1.3.0_windows_amd64.zip
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
 
-The SHA256 checksums of the binaries are:
-- zscaler-terraformer_1.3.0_windows_amd64.zip: 84408b4496a87298d70d955f3c300571ba5ed7559ab3d967ef02e6efe41e5fd0
+Package can be verified like this:
 
-Verification steps:
-1. Download the binary from the official release page.
-2. Verify the checksum using a SHA256 checksum tool.
+1. Go to the official Zscaler Terraformer CLI GitHub release page:
+
+   https://github.com/zscaler/zscaler-terraformer/releases/download/v1.3.0/zscaler-terraformer_1.3.0_windows_amd64.zip
+
+   to download the archive.
+
+2. You can use one of the following methods to obtain the SHA256 checksum:
+   - Use PowerShell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'
+
+   SHA256 checksum: 84408b4496a87298d70d955f3c300571ba5ed7559ab3d967ef02e6efe41e5fd0
+
+3. Compare the checksum obtained in step 2 with the checksum provided here. If they match, the binary is verified.
+
+LICENSE
+
+The license for this software can be found at:
+https://github.com/zscaler/zscaler-terraformer/blob/master/LICENSE

@@ -1,4 +1,16 @@
+<#
+.SYNOPSIS
+Installs the Zscaler Terraformer CLI.
+
+Authors: Zscaler Technology Alliances <devrel@zscaler.com>
+
+.DESCRIPTION
+This script installs the Zscaler Terraformer Command Line Interface.
+
+#>
+
 $ErrorActionPreference = 'Stop'
+
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
 # Define package details
@@ -20,24 +32,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-
-# Move the executable to a directory in the system PATH
-$exePath = "$unzipLocation\zscaler-terraformer.exe"
-$destinationPath = "$Env:ProgramFiles\zscaler-terraformer"
-
-# Ensure the destination directory exists
-if (-not (Test-Path $destinationPath)) {
-    New-Item -Path $destinationPath -ItemType Directory -Force
-}
-
-# Check if the file already exists and remove it if necessary
-$destinationFile = "$destinationPath\zscaler-terraformer.exe"
-if (Test-Path $destinationFile) {
-    Remove-Item -Path $destinationFile -Force
-}
-
-# Move the executable
-Move-Item -Path $exePath -Destination $destinationPath
 
 # Clean up the temporary directory
 Remove-Item -Recurse -Force $unzipLocation -ErrorAction SilentlyContinue

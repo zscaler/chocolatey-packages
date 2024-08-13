@@ -5,19 +5,33 @@
     <version>1.3.0</version>
     <title>Zscaler-Terraformer</title>
     <authors>Zscaler</authors>
-    <owners>Zscaler</owners>
-    <description>CLI tool to generate terraform files from existing ZPA and ZIA.</description>
+    <owners>William Guilherme</owners>
     <summary>CLI tool to generate terraform files from existing ZPA and ZIA. Infrastructure to Code</summary>
     <projectUrl>https://github.com/zscaler/zscaler-terraformer</projectUrl>
     <iconUrl>https://www.zscaler.com/favicons/apple-touch-icon.png</iconUrl>
+    <description>The Zscaler Terraformer CLI is an [open source project](https://github.com/zscaler/zscaler-terraformer/tree/master) written
+in Golang and released as separate binaries for Linux, macOS, and, yes, even Windows! The tool is designed to generate and import existing ZPA
+and ZIA configurations into Terraform HCL compliance code format.
+
+---
+
+## Important Notice
+
+Since the release of the Zscaler-Terraformer CLI version `1.3.0` we noticed that the virus scan reports positive findings. We
+have analyzed the generated binaries and we have not found any virus.
+
+This is a **common false-positive** in the Golang community for Windows binaries. For details, go to https://golang.org/doc/faq#virus
+
+---</description>
     <licenseUrl>https://github.com/zscaler/zscaler-terraformer/blob/master/LICENSE</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <packageSourceUrl>https://github.com/zscaler/chocolatey-packages</packageSourceUrl>
     <projectSourceUrl>https://github.com/zscaler/zscaler-terraformer</projectSourceUrl>
     <docsUrl>https://github.com/zscaler/zscaler-terraformer</docsUrl>
     <bugTrackerUrl>https://github.com/zscaler/zscaler-terraformer/issues</bugTrackerUrl>
-    <tags>terraformer terraform</tags>
+    <tags>terraformer terraform cloud security zscaler zpa zia</tags>
     <releaseNotes>https://github.com/zscaler/zscaler-terraformer/releases</releaseNotes>
+    <copyright>Zscaler Inc.</copyright>
   </metadata>
   <files>
      <file src="tools\**" target="tools" />
