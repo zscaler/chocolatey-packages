@@ -1,4 +1,4 @@
-<#
+ <#
 .SYNOPSIS
 Installs the Zscaler Terraformer CLI.
 
@@ -16,17 +16,25 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 # Define package details
 $packageName = 'zscaler-terraformer'
 
-# URL and checksum for the .zip file
-$url = 'https://github.com/zscaler/zscaler-terraformer/releases/download/v1.3.0/zscaler-terraformer_1.3.0_windows_amd64.zip'
-$checksum = '84408b4496a87298d70d955f3c300571ba5ed7559ab3d967ef02e6efe41e5fd0'
+# URL and checksum for the 64-bit .zip file
+$url64bit = 'https://github.com/zscaler/zscaler-terraformer/releases/download/v1.3.3/zscaler-terraformer_1.3.3_windows_amd64.zip'
+$checksum64bit = 'd0212769cbfe88b50703274aeec2b45e14cd9a49746b4bc2d0ed0b3ec84aa8ea'
+
+# URL and checksum for the 32-bit .zip file
+$url32bit = 'https://github.com/zscaler/zscaler-terraformer/releases/download/v1.3.3/zscaler-terraformer_1.3.3_windows_386.zip'
+$checksum32bit = 'e6f76af7cc09a0d36abab13cde29e74764f003bbd124b54e1b0f5bbfd83dd1d2'
 
 # Download, verify, and unzip the package
 $packageArgs = @{
     packageName    = $packageName
     unzipLocation  = $toolsDir
-    url            = $url
-    checksum       = $checksum
+    url            = $url32bit  # Default to 32-bit
+    checksum       = $checksum32bit
     checksumType   = 'sha256'
+    url64bit       = $url64bit  # Use this for 64-bit systems
+    checksum64     = $checksum64bit
+    checksumType64 = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
+ 
