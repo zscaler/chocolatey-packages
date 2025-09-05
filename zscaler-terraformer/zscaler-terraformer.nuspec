@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>zscaler-terraformer</id>
-    <version>2.0.17</version>
+    <version>$version$</version>
     <title>Zscaler-Terraformer</title>
     <authors>Zscaler</authors>
     <owners>William Guilherme</owners>
@@ -17,7 +17,7 @@ and ZIA configurations into Terraform HCL compliance code format.
 
 ## Important Notice
 
-Since the release of the Zscaler-Terraformer CLI version `1.3.0` we noticed that the virus scan reports positive findings. We
+Since the release of the Zscaler-Terraformer CLI version `1.3.0` and later, we noticed that the virus scan reports positive findings. We
 have analyzed the generated binaries and we have not found any virus.
 
 This is a **common false-positive** in the Golang community for Windows binaries. For details, go to https://golang.org/doc/faq#virus
