@@ -15,7 +15,10 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
 # Define package details
 $packageName = 'zscaler-terraformer'
-$version = '2.0.19'
+
+# Read version from version.txt file
+$versionFile = Join-Path (Split-Path $MyInvocation.MyCommand.Definition -Parent) "..\version.txt"
+$version = (Get-Content $versionFile).Trim()
 
 # URL and checksum for the 64-bit .zip file
 $url64bit = "https://github.com/zscaler/zscaler-terraformer/releases/download/v$version/zscaler-terraformer_$version`_windows_amd64.zip"
