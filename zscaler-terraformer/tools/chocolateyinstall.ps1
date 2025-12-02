@@ -17,15 +17,15 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 $packageName = 'zscaler-terraformer'
 
 # Use the release version directly (from GitHub tag)
-$version = "2.1.4"
+$version = "2.1.5"
 
 # URL and checksum for the 64-bit .zip file
 $url64bit = "https://github.com/zscaler/zscaler-terraformer/releases/download/v$version/zscaler-terraformer_$version`_windows_amd64.zip"
-$checksum64bit = 'feca552e2dcf09fac84508eb4e5986f8870714036a7a375579f68ecf79cb200a'
+$checksum64bit = 'a3f82926ac2beacf991fa06d1f6ba23489861a30935fe7c1f0be82847eb2350f'
 
 # URL and checksum for the 32-bit .zip file
 $url32bit = "https://github.com/zscaler/zscaler-terraformer/releases/download/v$version/zscaler-terraformer_$version`_windows_386.zip"
-$checksum32bit = 'c13487ec8cef4d31306c7af83ed98917fc18cee6f54fa9d4f165ef32cd4867ac'
+$checksum32bit = '609edf0a439ed36887a4011d87488a7646225f1ff71da40abd2b4bd01c77c73e'
 
 # Download, verify, and unzip the package
 $packageArgs = @{
